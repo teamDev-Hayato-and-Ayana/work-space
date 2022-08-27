@@ -1,0 +1,40 @@
+/* common */
+
+/* body */
+header .container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 32px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yuji Syuku', serif;
+}
+main .container {
+    margin-right: auto;/* 中央寄せ */
+    margin-left: auto;/* 中央寄せ */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    align-content:stretch;
+    width: 500px;
+}
+
+.field {
+    width:150px;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+    color: #6091d3;/*文字色*/
+    border: solid 3px #000812;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    background-color: green;
+}
+
+.field:hover {
+    background: greenyellow;
+    border: 2px solid #333;
+    cursor: pointer;/*カーソルをポインターに変える*/
+}
+/*  */
