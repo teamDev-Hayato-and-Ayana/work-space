@@ -20,7 +20,18 @@ main .container {
     align-content:stretch;
     width: 500px;
 }
-
+main .panel {
+    margin-right: auto;/* 中央寄せ */
+    margin-left: auto;/* 中央寄せ */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    align-content:stretch;
+    width: 130px;
+    height: 135px;
+    margin-bottom: auto;
+}
 .field {
     width:150px;
     height: 150px;
@@ -36,5 +47,17 @@ main .container {
     background: greenyellow;
     border: 2px solid #333;
     cursor: pointer;/*カーソルをポインターに変える*/
+}
+
+.circle {
+	width: 100px;/*幅*/
+	height: 100px;/*高さ*/
+	border-radius: 50%;/*角丸*/
+    background-color:black;
+}
+img {
+    width: 150px;/*幅*/
+	height: 150px;/*高さ*/
+	border-radius: 50%;/*角丸*/
 }
 /*  */
