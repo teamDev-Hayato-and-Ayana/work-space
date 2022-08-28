@@ -82,3 +82,4 @@ let panelManagerInfo = new Game("Master");
 
 let turn = Game.turnManager(0);
 Panel.writeFigureOnPanel();
+
