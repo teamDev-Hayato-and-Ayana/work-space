@@ -6,7 +6,10 @@ class Panel{
                 console.log(panels[i].id);
                 let img = document.createElement("img");
                 turn = Game.turnManager(turn);
+                
                 if (!panelManagerInfo.field[parseInt(panels[i].id)]) img.src = Panel.decideFigure(turn);
+                else turn--;
+
                 Game.updatePanelInfo(turn, panels[i].id);
                 Game.judge(panelFirstInfo);
                 Game.judge(panelSecondInfo);
