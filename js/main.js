@@ -68,13 +68,17 @@ class Game{
                 if (panelInfo.field[winPatterns[i][j]] == true) count++;
             }
             if (count >= 3 && panelInfo.order == "First" && !this.isFinish()) {
-                console.log("先攻の勝利")
-                result.innerHTML = "先攻の勝利"
+                console.log("先攻の勝利");
+                result.innerHTML = "先攻の勝利";
+                confetti();
+                Animation.hubuki();
             }
             if (count >= 3 && panelInfo.order == "Second" && !this.isFinish()) {
-                console.log("後攻の勝利")
-                result.innerHTML = "後攻の勝利"
-            } 
+                console.log("後攻の勝利");
+                result.innerHTML = "後攻の勝利";
+                confetti();
+                Animation.hubuki();
+            }
             else count = 0;
         }
     }
@@ -86,6 +90,22 @@ class Game{
 
     static start(){
         Panel.writeFigureOnPanel();
+    }
+}
+
+class Animation{
+    static hubuki(){
+        (function confettiAnime() {
+            confetti({
+              origin: {
+                x: Math.random(),
+                y: 0
+              }
+            })
+            setTimeout(function() {
+              requestAnimationFrame(confettiAnime)
+            }, 100)
+          })()
     }
 }
 const winPatterns = [
@@ -105,4 +125,3 @@ let panelManagerInfo = new Game("Master");
 
 let turn = Game.turnManager(0);
 Game.start();
-
