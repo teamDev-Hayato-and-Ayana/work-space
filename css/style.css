@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 /* common */
 
 /* body */
@@ -49,15 +50,16 @@ main .panel {
     cursor: pointer;/*カーソルをポインターに変える*/
 }
 
-.circle {
-	width: 100px;/*幅*/
-	height: 100px;/*高さ*/
-	border-radius: 50%;/*角丸*/
-    background-color:black;
-}
 img {
     width: 150px;/*幅*/
 	height: 150px;/*高さ*/
 	border-radius: 50%;/*角丸*/
+}
+
+.result {
+    font-family: 'Yuji Syuku', serif;
+    font-size: x-large;
+    margin: 0 auto;
+    padding: 32px; 
 }
 /*  */
