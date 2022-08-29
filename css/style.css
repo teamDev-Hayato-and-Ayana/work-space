@@ -23,7 +23,9 @@ main .container {
     font-family: 'Yuji Syuku', serif;
     gap: 25px;
 }
-/* index.html */
+
+
+/* game.html */
 main .panel {
     margin-right: auto;/* 中央寄せ */
     margin-left: auto;/* 中央寄せ */
@@ -41,7 +43,7 @@ main .panel {
     height: 150px;
     padding: 0;
     margin: 0;
-    color: #6091d3;/*文字色*/
+    /* color: #6091d3; */
     border: solid 3px #000812;/*線*/
     border-radius: 10px;/*角の丸み*/
     background-color: green;
@@ -64,7 +66,7 @@ img {
     font-size: x-large;
 }
 
-/* start.html */
+/* index.html */
 .startPanel {
     width:200px;
     height: 60px;
@@ -90,7 +92,27 @@ img {
 .box {
     display: inline-block;
     border: solid 5px black;
-    background-color: burlywood;
+    background-color: rgb(85, 172, 85);
+    font-family: 'Yuji Syuku', serif;
 }
 
-/*  */
+/* animation */
+.fade-in {
+    animation-name: fadeInAnime;
+    animation-fill-mode:backwards;
+    animation-duration: 1.5s;
+    animation: iteration count 0;
+    animation-timing-function:ease;
+    animation-delay: 0.5s;
+    animation-direction:normal;
+}
+    
+@keyframes fadeInAnime{
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  } 
