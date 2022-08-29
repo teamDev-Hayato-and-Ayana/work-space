@@ -26,9 +26,7 @@ class Panel{
         else return "img/バツ２.svg";
     }
 }
-class Screen{
 
-}
 class Game{
     constructor(order){
         this.order = order;
@@ -47,7 +45,7 @@ class Game{
 
     static turnManager(turnCount){
         let result = document.getElementById("resultText");
-        if (turnCount >= 9 && !this.isFinish()) {
+        if (turnCount > 9 && !this.isFinish()) {
             console.log("引き分け");
             result.innerHTML = "引き分け";
         };
@@ -76,13 +74,18 @@ class Game{
             if (count >= 3 && panelInfo.order == "Second" && !this.isFinish()) {
                 console.log("後攻の勝利")
                 result.innerHTML = "後攻の勝利"
-            } else count = 0;
+            } 
+            else count = 0;
         }
     }
 
     static isFinish(){
         let result = document.getElementById("resultText");
-        return result.innerHTML != "";
+        return result.innerHTML != "ゲーム中…";
+    }
+
+    static start(){
+        Panel.writeFigureOnPanel();
     }
 }
 const winPatterns = [
@@ -101,5 +104,5 @@ let panelSecondInfo = new Game("Second");
 let panelManagerInfo = new Game("Master");
 
 let turn = Game.turnManager(0);
-Panel.writeFigureOnPanel();
+Game.start();
 

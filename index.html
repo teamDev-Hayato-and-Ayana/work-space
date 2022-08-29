@@ -11,7 +11,9 @@
 <body>
     <header>
         <div class="container">
-            <h1>アヤナとハヤトのマルバツゲーム</h1>
+            <div class="result">
+                <h1 id="resultText">ゲーム中…</h1>
+            </div>    
         </div>
     </header>
     <main>
@@ -27,11 +29,9 @@
                 <td type="button" class="field" id="7"></td>
                 <td type="button" class="field" id="8"></td>
             </table>
-        </div>
-        <div class="container">
-            <div class="result">
-                <h1 id="resultText"></h1>
-            </div>    
+            <div class="container">
+                <input type="button" class="startPanel" value="スタート画面" onclick="location.href='./start.html'">        
+            </div>
         </div>
     </main>
     <script src="js/main.js"></script>

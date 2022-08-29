@@ -20,7 +20,10 @@ main .container {
     flex-wrap:wrap;
     align-content:stretch;
     width: 500px;
+    font-family: 'Yuji Syuku', serif;
+    gap: 25px;
 }
+/* index.html */
 main .panel {
     margin-right: auto;/* 中央寄せ */
     margin-left: auto;/* 中央寄せ */
@@ -59,7 +62,35 @@ img {
 .result {
     font-family: 'Yuji Syuku', serif;
     font-size: x-large;
-    margin: 0 auto;
-    padding: 32px; 
 }
+
+/* start.html */
+.startPanel {
+    width:200px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    color: black;
+    border: solid 3px #000812;/*線*/
+    border-radius: 10px;
+    background-color: burlywood;
+    font-size: x-large;
+}
+
+.startPanel:hover {
+    background-color: rgb(243, 230, 212);
+    border: 2px solid #333;
+    cursor: pointer;/*カーソルをポインターに変える*/
+}
+
+.title {
+    padding: 40px;
+}
+/* developers.html */
+.box {
+    display: inline-block;
+    border: solid 5px black;
+    background-color: burlywood;
+}
+
 /*  */
