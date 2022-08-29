@@ -14,6 +14,12 @@ class Panel{
                     Game.updatePanelInfo(turn, panels[i].id);
                     Game.judge(panelFirstInfo);
                     Game.judge(panelSecondInfo);
+                    let result = document.getElementById("resultText");
+                    if (Game.isDraw() && !Game.isFinish()) {
+                        console.log("引き分け");
+                        result.innerHTML = "引き分け";
+                    };
+            
                     panels[i].append(img);
                     console.log(panelFirstInfo.field, panelSecondInfo.field, panelManagerInfo.field)
                 }
@@ -44,11 +50,6 @@ class Game{
     }
 
     static turnManager(turnCount){
-        let result = document.getElementById("resultText");
-        if (turnCount > 9 && !this.isFinish()) {
-            console.log("引き分け");
-            result.innerHTML = "引き分け";
-        };
         return turnCount + 1;
     }
 
@@ -82,7 +83,14 @@ class Game{
             else count = 0;
         }
     }
+    static isDraw(){
+        let managerPanelValues = Object.values(panelManagerInfo.field);
+        for (let i = 0; i < managerPanelValues.length; i++){
+            if (managerPanelValues[i] == false) return false;
+        }
 
+        return true;
+    }
     static isFinish(){
         let result = document.getElementById("resultText");
         return result.innerHTML != "ゲーム中…";
